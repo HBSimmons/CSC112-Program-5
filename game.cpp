@@ -67,9 +67,9 @@ void Game::play()
 		i=checkwin();
 
 		player++;
-	}while(i==-1);
+	}while(i == -1);
 	board();
-	if(i==1)
+	if(i == 1)
 
 		cout <<"==>Congrats, player "<<--player<<" wins!!! ";
 	else
@@ -80,13 +80,15 @@ void Game::play()
 	cin.get();
 }
 
-/*********************************************
+/*
 
-	FUNCTION TO RETURN GAME STATUS
-	1 FOR GAME IS OVER WITH RESULT
-	-1 FOR GAME IS IN PROGRESS
-	O GAME IS OVER AND NO RESULT
-**********************************************/
+	This function to return game status
+	1 means game is over, with result
+	-1 means game is in progress
+	O means game over, draw
+
+
+*/
 
 int Game::checkwin()
 {
@@ -124,31 +126,46 @@ int Game::checkwin()
 }
 
 
-/*******************************************************************
-     FUNCTION TO DRAW BOARD OF TIC TAC TOE WITH PLAYERS MARK
-********************************************************************/
-
+//   This function draws the board for TTT and the player marks
 
 void Game::board()
 {
 	cout << clearScreen;
-	cout << "\n\n\tTic Tac Toe\n\n";
+	cout << "      T I C   T A C   T O E    " << endl << endl;
+	
+	cout << "          \\|/ ____ \\|/" << endl
+		 << "           @~/ ,. \\~@  " << endl
+		 << "          /_( \\__/ )_\\ " << endl
+		 << "             \\__U_/    " << endl << endl << endl;
 
-	cout << "Player 1 (X)  -  Player 2 (O)" << endl << endl;
+	cout << "  Player 1 (X)  -  Player 2 (O)  " << endl << endl;
 	cout << endl;
 
-	cout << "     |     |     " << endl;
-	cout << "  " << square[1] << "  |  " << square[2] << "  |  " << square[3] << endl;
+	cout << "             |     |     " << endl;
+	cout << "          " << square[1] << "  |  " << square[2] << "  |  " << square[3] << endl;
 
-	cout << "_____|_____|_____" << endl;
-	cout << "     |     |     " << endl;
+	cout << "        _____|_____|_____" << endl;
+	cout << "             |     |     " << endl;
 
-	cout << "  " << square[4] << "  |  " << square[5] << "  |  " << square[6] << endl;
+	cout << "          " << square[4] << "  |  " << square[5] << "  |  " << square[6] << endl;
 
-	cout << "_____|_____|_____" << endl;
-	cout << "     |     |     " << endl;
+	cout << "        _____|_____|_____" << endl;
+	cout << "             |     |     " << endl;
 
-	cout << "  " << square[7] << "  |  " << square[8] << "  |  " << square[9] << endl;
+	cout << "          " << square[7] << "  |  " << square[8] << "  |  " << square[9] << endl;
 
-	cout << "     |     |     " << endl << endl;
+	cout << "             |     |     " << endl << endl;
 }
+
+
+
+/*
+
+
+               \|/ ____ \|/       
+                @~/ ,. \~@        
+               /_( \__/ )_\       
+                  \__U_/     
+				
+				
+				*/
