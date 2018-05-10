@@ -58,7 +58,7 @@ void Game::play()
 			square[9] = mark;
 		else
 		{
-			cout<<"Invalid move ";
+			cout << "Dude, that's not a valid move. Try again." ;
 
 			player--;
 			cin.ignore();
